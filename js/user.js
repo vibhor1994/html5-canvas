@@ -4,7 +4,7 @@ var ctx = paintArea.getContext("2d");//build in object with properties and metho
 var printArea = document.getElementById("test");//div to show realtime coordinates of cursor
 var isMouseDown = false;//to check if mouse button is pressed
 var isDragged=false;//to check if mouse is dragged
-var canRplace=false;//to check to replace old values with new
+var canRplace=false;//to  replace old values with new
 var x,y,height=0,width=0,a,b,index;
 rectan = [];//array to store rectangle properties
 count = 0;//rectan.lenth was not working so i used this instead to get length
@@ -32,7 +32,7 @@ function cnvs_getCoordinates(e)
 a=e.clientX-foo.left;
 b=e.clientY-foo.top;
 document.getElementById("test").innerHTML="Coordinates: (" + a + "," + b + ")";
-// executes when mouse button is pressed and already a rectangle is at the position.and to drag the rectangle
+// executes when mouse button is pressed and already a rectangle is at the position also to drag the rectangle
   if(isMouseDown && isExist){
     newX=x-rectan[index].oldX;
     newY=y-rectan[index].oldY;
@@ -43,7 +43,7 @@ document.getElementById("test").innerHTML="Coordinates: (" + a + "," + b + ")";
    canRplace = true;
 
   }
-//executes when mouse button is pressed and there is no rectangle at the coordinate.its draw a stroked rectangle
+//executes when mouse button is pressed and there is no rectangle at the coordinate.it draws a stroked rectangle
   else if(isMouseDown && !isExist){
     ctx.fillStyle = "black";
     ctx.clearRect(0,0,paintArea.width,paintArea.height);
@@ -51,7 +51,7 @@ document.getElementById("test").innerHTML="Coordinates: (" + a + "," + b + ")";
     ctx.strokeRect(x,y,a-x,b-y);
     isDragged = true;
   }
-//executes when mouse button is not pressed and there is no existing rectangle and when the dragged is performed.it draw the rectangle and pushes rectangle object to array
+//executes when mouse button is not pressed and there is no existing rectangle and when the dragged is performed it draws the rectangle and pushes rectangle object to array
   else if(!isMouseDown && !isExist && isDragged){
   var color = getRandomColor();
   ctx.fillStyle = color;
