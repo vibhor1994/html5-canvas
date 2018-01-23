@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="simple paint app">
+    <meta name="author" content="vibhor">
+
+    <title>Paint App</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- user defined css -->
+   <link rel="stylesheet" href="css/user.css">
+</head>
+
+
+<body>
+
+
+  <div role="main" class="container">
+
+         <div class="main-heading">
+             <h1>Simple Paint App</h1>
+            <canvas  width="700" height="400" id="paintArea" onmousemove="cnvs_getCoordinates(event)" onmouseout="cnvs_clearCoordinates()"></canvas>
+         </div>
+        <button type="button" onclick=clearCanvas() name="button">Reset</button>
+        <div id="test"></div>
+
+     </div>
+    <!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript required for bootsrap
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+
+    <!--user defined javascript-->
+    <script src="js/user.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+body{
+    cursor: default;
+}
+.main-heading h1{
+    text-align: center;
+}
+
+#paintArea {
+    /* width: 100%; */
+    margin-left: 200px;
+    border: 1px solid #1a1a1a;
+    cursor: crosshair;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+} 
